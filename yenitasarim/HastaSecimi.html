@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oruba Medicat Simulation Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Oruba Medicat Simulation Technology">
+<meta name="author" content="Burak Dalgic">
+
+<!-- styles -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/oruba.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/tablesorter.jquery.js"></script>
+<script src="js/tablesorter.widget.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#submitButton').click(function() {
+			$('#hastaForm').submit();
+		});
+		$('#MainContent_GridViewPatient').tablesorter();
+	});
+</script>
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="#"><div id="orubaLogo"></div></a>
+				<div class="btn-group pull-right">
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-user"></i> Kullanıcı <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Profiliniz</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Sistemden Çıkış</a></li>
+					</ul>
+				</div>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="index.html">Anasayfa</a></li>
+						<li><a href="urodinami.html">Ürodinami</a></li>
+						<li><a href="HastaSecimi.html">Hasta Seçimi</a></li>
+						<li><a href="TakingInformation.html">Hasta Ekleme</a></li>
+						<li><a href="Hakkinda.html">Hakkında</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="span12">
+					<div class="page-header">
+						<h1>HASTA SEÇİMİ</h1>
+					</div>
+
+					<table id="MainContent_GridViewPatient" class="table table-striped">
+						<thead>
+						<tr>
+							<th scope="col">Hasta ID</th>
+							<th scope="col" >Hasta Yaşı</th>
+							<th scope="col" >Hasta Cinsiyeti</th>
+							<th scope="col">Kategori</th>
+							<th scope="col">&nbsp;</th>
+						</tr>
+						</thead>
+						<tr>
+							<td>1</td>
+							<td>03.01.1970</td>
+							<td>Erkek</td>
+							<td>Baskılanamamış n&#246;ropatik mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>07.11.1972</td>
+							<td>Bayan</td>
+							<td>Refleks n&#246;ropatik mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>10.09.1968</td>
+							<td>Erkek</td>
+							<td>Flask n&#246;ropatik mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>11.12.1956</td>
+							<td>Erkek</td>
+							<td>Diğer n&#246;romusk&#252;ler disfonksiyonel mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>02.04.1954</td>
+							<td>Bayan</td>
+							<td>Diğer n&#246;romusk&#252;ler disfonksiyonel mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>30.11.1950</td>
+							<td>Bayan</td>
+							<td>Diğer n&#246;romusk&#252;ler disfonksiyonel mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>30.11.1950</td>
+							<td>Bayan</td>
+							<td>Diğer n&#246;romusk&#252;ler disfonksiyonel mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>30.11.1950</td>
+							<td>Bayan</td>
+							<td>Diğer n&#246;romusk&#252;ler disfonksiyonel mesane</td>
+							<td><a href="" class="btn btn-success">Select</a></td>
+						</tr>
+					</table>
+
+
+
+
+				</div>
+
+			</div>
+
+			<hr>
+
+			<footer>
+				<p>&copy; Oruba Medicat Simulation Technology 2012</p>
+			</footer>
+		</div>
+	</div>
+
+</body>
+</html>
+

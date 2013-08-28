@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oruba Medicat Simulation Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Oruba Medicat Simulation Technology">
+<meta name="author" content="Burak Dalgic">
+
+<!-- styles -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/oruba.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#submitButton').click(function() {
+			$('#hastaForm').submit();
+		});
+	});
+</script>
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="#"><div id="orubaLogo"></div></a>
+				<div class="btn-group pull-right">
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-user"></i> Kullanıcı <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Profiliniz</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Sistemden Çıkış</a></li>
+					</ul>
+				</div>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="index.html">Anasayfa</a></li>
+						<li><a href="urodinami.html">Ürodinami</a></li>
+						<li><a href="HastaSecimi.html">Hasta Seçimi</a></li>
+						<li><a href="TakingInformation.html">Hasta Ekleme</a></li>
+						<li><a href="Hakkinda.html">Hakkında</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="span12">
+
+					<section id="forms">
+
+						<form class="form-horizontal" id="hastaForm">
+							<legend>HASTA TEŞHİS SİSTEMİ</legend>
+							<fieldset>
+								<div class="formControl">
+									<div class="control-group">
+										<label class="control-label"
+											for="MainContent_TextBoxHastaCinsi"></label>
+										<div class="controls">Lütfen 'Hasta1' için teşhişinizi
+											yapınız ;</div>
+									</div>
+								</div>
+
+								<div class="formControl">
+									<div class="control-group">
+										<label class="control-label"
+											for="MainContent_TextBoxHastaSikayeti"></label>
+										<div class="controls">
+											<textarea name="ctl00$MainContent$TextBoxHastaSikayeti"
+												rows="2" cols="20" id="MainContent_TextBoxHastaSikayeti"
+												style="width: 494px;">
+</textarea>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<div class="form-actions">
+								<button id="submitButton" class="btn btn-primary">Devam</button>
+							</div>
+						</form>
+
+					</section>
+
+
+
+
+
+
+				</div>
+
+			</div>
+
+			<hr>
+
+			<footer>
+				<p>&copy; Oruba Medicat Simulation Technology 2012</p>
+			</footer>
+		</div>
+	</div>
+
+</body>
+</html>
+

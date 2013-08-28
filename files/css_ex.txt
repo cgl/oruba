@@ -1,0 +1,46 @@
+<ul class="navbar">
+<li id="top-menu-item1" class="menu-title">
+<a class="menu-title" href="http://www.laerdal.com/nav/2/Customer-Solutions">Customer Solutions</a>
+
+#navbar {
+    margin: 0;
+    padding: 91px 0 0;
+}
+#navbar-items {
+    border-top: 1px solid #DDDDDD;
+}
+#navbar-items ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#navbar-items ul.navbar {
+    height: 35px;
+}
+#navbar-items li.menu-title {
+    display: inline;
+    float: left;
+    width: 220px;
+}
+#navbar-items li.menu-title a.menu-title {
+    border-right: 1px solid #E8E8E8;
+    color: #4A4A4A;
+    display: block;
+    font-size: 16px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    min-width: 200px;
+    padding: 4px 9px 3px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#navbar-items li.menu-title:hover > a.menu-title, #navbar li.menu-title a.selected, #navbar-items div.narrow-menu a:hover {
+    background: url("/images/webnxt/navbar-bg.png") repeat scroll 0 -42px #333333;
+    color: #FFFFFF;
+}
+#navbar li.menu-title a.selected {
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}

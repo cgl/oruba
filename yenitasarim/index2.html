@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oruba Medicat Simulation Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Oruba Medicat Simulation Technology">
+<meta name="author" content="Burak Dalgic">
+
+<!-- styles -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/oruba.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#signinForm").validate();
+		$('#submit').click(function() {
+			$('#signinForm').submit();
+		});
+	});
+</script>
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div id="signin" style="display: inline;">
+		<div>
+			<div class="modal hide fade" id="signinModal" style="display: none;">
+				<div class="modal-header">
+					<a class="close" data-dismiss="modal">×</a>
+					<h3>Sign In</h3>
+				</div>
+				<div class="modal-body">
+					<form name="signinForm" id="signinForm" class="form-horizontal">
+						<fieldset>
+							<div class="control-group">
+								<label class="control-label" for="email">Email</label>
+								<div class="controls">
+									<input class="input-medium required email" type="text">
+									<p class="help-block">Enter email address</p>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="password">Password</label>
+								<div class="controls">
+									<input class="input-small required" type="password">
+									<p class="help-block">Enter password</p>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+					<div class="modal-footer">
+						<button class="btn btn-primary" id="submit">Sign In</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="#"><div id="orubaLogo"></div></a>
+				<div class="btn pull-right">
+					<a data-toggle="modal" data-target="#signinModal"><i
+						class="icon-lock"></i> Sign In</a>
+				</div>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li ><a href="index.html">Anasayfa</a></li>
+						<li class="active"><a href="urodinami.html">Ürodinami</a></li>
+						<li><a href="HastaSecimi.html">Hasta Seçimi</a></li>
+						<li><a href="TakingInformation.html">Hasta Ekleme</a></li>
+						<li><a href="Hakkinda.html">Hakkında</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="span12">
+				
+				
+				
+				
+					<div class="hero-unit">
+						<p>MEDİKAL SİMÜLASYON HASTA GÜVENLİĞİ İÇİN ETİK BİR ZORUNLULUK
+							HALİNE GELMİŞTİR.</p>
+					</div>
+					<div class="row">
+						<div class="span12">
+							<h2>ÜRODİNAMİ MEDİKAL SİMÜLASYON SİSTEMİ,</h2>
+							<p>
+								ürodinami çalışmalarının günümüzde mevcut olmayan teorik ve
+								uygulamalı eğitimini, <strong>medikal simülasyon
+									sistemi</strong> ile sağlamaktadır.
+							</p>
+						</div>
+						<!--/span-->
+					</div>
+					<!--/row-->
+					<div class="row">
+						<div class="span12">Hekimlerin ve tüm saglık çalısanlarının
+							hastaya zarar vermeden, mevcut tecrübelerini arttırabilmelerini
+							ve yeni teknikler ögrenebilmelerini mümkün kılmaktadır.</div>
+						<!--/span-->
+					</div>
+					<!--/row-->
+					<div class="row">
+						<div class="span12">
+							<h2>Anonimleştirilmiş gerçek hasta verileri kullanılarak,</h2>
+							<p>hastanın hastaneye girdiği andan ürodinami çalışması
+								gerçekleşme anına kadar olan kısım web platformu üzerinden
+								teorik olarak simüle edilmektedir.</p>
+						</div>
+						<!--/span-->
+					</div>
+					<!--/row-->
+					<div class="row">
+						<div class="span12">
+							<h2>Simülasyon Mankeni ile,</h2>
+							<p>ürodinami çalışmaları manken hasta üzerinden bire-bir
+								uygulamalı olarak simüle edilmektedir.</p>
+						</div>
+						<!--/span-->
+					</div>
+					<!--/row-->
+					<div class="row">
+						<div class="span12">
+							<p>Web platformu aracılığı ile testi gerçekleştiren kişi,
+								gerçekleştirdiği çalışma için “Karar Destek Sistemi” sonuçlarını
+								görebilmekte, kendi teşhisini koyabilmekte ve vaka hakkında
+								uzman görüşlerine ulaşabilmektedir.</p>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+
+			<hr>
+
+			<footer>
+				<p>&copy; Oruba Medicat Simulation Technology 2012</p>
+			</footer>
+		</div>
+	</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oruba Medicat Simulation Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Oruba Medicat Simulation Technology">
+<meta name="author" content="Burak Dalgic">
+
+<!-- styles -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/oruba.css" rel="stylesheet">
+<!--[if IE ]>
+<script type="text/javascript" src="js/flot/excanvas.min.js"></script>
+<![endif]-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/flot/jquery.flot.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="#"><div id="orubaLogo"></div></a>
+				<div class="btn-group pull-right">
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-user"></i> Kullanıcı <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Profiliniz</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Sistemden Çıkış</a></li>
+					</ul>
+				</div>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="index.html">Anasayfa</a></li>
+						<li><a href="urodinami.html">Ürodinami</a></li>
+						<li><a href="HastaSecimi.html">Hasta Seçimi</a></li>
+						<li><a href="TakingInformation.html">Hasta Ekleme</a></li>
+						<li><a href="Hakkinda.html">Hakkında</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="span12">
+					<div class="page-header">
+						<h1>HASTA SEÇİMİ</h1>
+					</div>
+					<div id="placeholder" class="span11"
+						style="height: 300px; padding: 0px; position: relative;"></div>
+
+				</div>
+
+			</div>
+
+			<hr>
+
+			<footer>
+				<p>&copy; Oruba Medicat Simulation Technology 2012</p>
+			</footer>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			// we use an inline data source in the example, usually data would
+			// be fetched from a server
+			var data = [], totalPoints = 300;
+			function getRandomData() {
+				if (data.length > 0)
+					data = data.slice(1);
+
+				// do a random walk
+				while (data.length < totalPoints) {
+					var prev = data.length > 0 ? data[data.length - 1] : 50;
+					var y = prev + Math.random() * 10 - 5;
+					if (y < 0)
+						y = 0;
+					if (y > 100)
+						y = 100;
+					data.push(y);
+				}
+
+				// zip the generated y values with the x values
+				var res = [];
+				for ( var i = 0; i < data.length; ++i)
+					res.push([ i, data[i] ])
+				return res;
+			}
+
+			// setup control widget
+			var updateInterval = 30;
+			$("#updateInterval").val(updateInterval).change(function() {
+				var v = $(this).val();
+				if (v && !isNaN(+v)) {
+					updateInterval = +v;
+					if (updateInterval < 1)
+						updateInterval = 1;
+					if (updateInterval > 2000)
+						updateInterval = 2000;
+					$(this).val("" + updateInterval);
+				}
+			});
+
+			// setup plot
+			var options = {
+				lines : {
+					show : true
+				},
+				series : {
+					shadowSize : 0
+				}, // drawing is faster without shadows
+				yaxis : {
+					min : 0,
+					max : 100
+				},
+				xaxis : {
+					show : false
+				}
+			};
+			var plot = $.plot($("#placeholder"), [ getRandomData() ], options);
+
+			function update() {
+				plot.setData([ getRandomData() ]);
+				// since the axes don't change, we don't need to call plot.setupGrid()
+				plot.draw();
+
+				setTimeout(update, updateInterval);
+			}
+
+			update();
+		});
+	</script>
+</body>
+</html>
+
